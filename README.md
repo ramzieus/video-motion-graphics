@@ -11,6 +11,47 @@ Supports **Level 1 (Prompt-Driven)** and **Level 2 (Asset-Driven)** production p
 
 ---
 
+## 🚀 Quick Install (Universal)
+
+Install this skill into any AI coding assistant (Claude Code, Cursor, Copilot, Windsurf, etc.) using the standard **[skills.sh](https://skills.sh/)** CLI:
+
+```bash
+# Install to your current project
+npx skills add ramzieus/video-motion-graphics
+
+# Or install globally across all projects on your machine
+npx skills add ramzieus/video-motion-graphics -g
+```
+
+### Manual Installation (Git Clone)
+
+If you prefer installing manually or via git submodules:
+
+```bash
+# Standard project-level install
+mkdir -p .skills
+git clone https://github.com/ramzieus/video-motion-graphics.git .skills/video-motion-graphics
+
+# Or as a git submodule
+git submodule add https://github.com/ramzieus/video-motion-graphics.git .skills/video-motion-graphics
+```
+
+---
+
+## 💬 How to Trigger & Use It
+
+Once installed, simply type the slash command in your agent chat:
+
+```text
+/video-motion-graphics
+```
+
+*(Or ask in natural language: "Create a 1080x1920 motion graphic video" / "أريد إنشاء فيديو موشن جرافيك عمودي")*
+
+The assistant will immediately reply with **Step 0: Language Setup**, and guide you through the process step by step!
+
+---
+
 ## 🧭 Step 0: Language & Collaboration Setup
 
 Before starting creative direction, the agent establishes:
