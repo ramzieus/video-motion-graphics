@@ -22,10 +22,15 @@ After the languages are answered, run the intake **one question at a time** (sec
 ## 2. Level 1 Questions (ask one by one, wait for each answer)
 
 1. Topic: "What is the topic of the video, in one sentence?"
-2. On-screen text: "What are the 3 to 5 short sentences to show on screen? (Or should I draft them for you?)"
-3. Style: "Default: calm and confident, dark background, two colors plus a highlight color for a single word, large clear font. Keep or change?"
-4. Motion: "Default: smooth sentence entrances, transition every 2 to 3 seconds, code-generated sound effects. Keep or change?"
-5. Ending: "What name should appear at the end, with 'Follow me' (or 'تابعني')?"
+   - Examples: "Why discipline beats motivation" / "5 habits of productive developers" / "Launching my new app" / "A short story about patience"
+2. On-screen text: "What are the 3 to 5 short sentences to show on screen?"
+   - Options: "I'll write them myself" / "Draft them for me from the topic" / "Draft them, then I'll edit" / "Use a quote or saying (I'll paste it)"
+3. Style: "Which visual style do you want?"
+   - Options: "Default: calm and confident, dark background, two colors + one highlight word" / "Bold and energetic: high contrast, neon accent" / "Clean and light: white background, soft pastel accent" / "Luxury: black and gold, elegant serif"
+4. Motion: "Which motion feel do you want?"
+   - Options: "Default: smooth spring entrances, a cut every 2 to 3s, code-made SFX" / "Fast and punchy: quick cuts, kinetic text, impact SFX" / "Slow and cinematic: long fades, soft camera drift, ambient SFX" / "Minimal: simple fades, no SFX"
+5. Ending: "What should the ending say?"
+   - Options: "My name + 'Follow me' (or 'تابعني')" / "My name + a call to action (e.g. 'Link in bio')" / "My name + handle (e.g. @username)" / "No ending card"
 
 Safe zone (180 top, 320 bottom, 90 sides) is fixed; do not ask.
 
@@ -33,12 +38,18 @@ Safe zone (180 top, 320 bottom, 90 sides) is fixed; do not ask.
 
 ## 3. Level 2 Questions (ask one by one; each is optional, skipped = Level 1 default)
 
-6. Font: "Do you have a font file? Give the path, or skip."
-7. Colors: "Do you have 5 brand color codes? Give them, or skip."
-8. Music: "Do you have a music file? If yes, give the path and I will cut scenes to its beat."
-9. Photo: "Do you have a photo of yourself without a background, for the ending? Give the path, or skip."
-10. Photos or clips: "Any photos or video clips to include? Give the paths, or skip."
-11. Reference video: "Is there a video whose rhythm and style you like? Give the path and I will take its feel without copying."
+6. Font: "Do you have a font file?"
+   - Options: "Skip (use default: Cairo for Arabic, Plus Jakarta Sans for Latin)" / "Yes, here is the path" / "Suggest a font for my style"
+7. Colors: "Do you have brand color codes?"
+   - Options: "Skip (use style defaults)" / "Yes, I'll give 5 hex codes (background, surface, text, muted text, accent)" / "Pick a palette for me" (e.g. obsidian + cyan, navy + amber, charcoal + coral)
+8. Music: "Do you have a music file?"
+   - Options: "Skip (code-made SFX only)" / "Yes, here is the path (cut scenes to its beat)" / "Suggest a music mood (calm, epic, upbeat)"
+9. Your photo: "Do you have a photo of yourself without a background, for the ending?"
+   - Options: "Skip (name badge only)" / "Yes, here is the path"
+10. Photos or clips: "Any photos or video clips to include?"
+   - Options: "Skip (pure motion graphics)" / "Yes, here are the paths (use as b-roll/backgrounds)" / "Yes, a logo only (path)"
+11. Reference video: "Is there a video whose rhythm and style you like?"
+   - Options: "Skip" / "Yes, here is the path (take the feel without copying)"
 
 Then summarize the requirements and ask: "Before I start, is there anything missing or any additional detail you would like to include?"
 

@@ -37,31 +37,42 @@ Do NOT ask the user to choose a workflow level. Always use **both** levels toget
 - **Level 1**: Prompt-Driven (topic, text, style, motion, ending)
 - **Level 2**: Asset-Driven (local files: fonts, colors, audio, clips, photo). Every Level 2 field is optional; if the user skips one, fall back to the Level 1 default.
 
-**NEVER dump the templates or a full questionnaire on the user.** Collect requirements interactively, **one question at a time**: ask a single question, wait for the answer, then ask the next. Use `AskUserQuestion` when available (offer the defaults as options plus "Other"); otherwise ask in plain text. Ask all questions in the **Communication Language**.
+**NEVER dump the templates or a full questionnaire on the user.** Collect requirements interactively, **one question at a time**: ask a single question, wait for the answer, then ask the next. Use `AskUserQuestion` when available (use the listed options, plus "Other" for custom input); otherwise ask in plain text. Ask all questions in the **Communication Language**.
 
 ---
 
 ## Intake Questions (One by One)
 
-Ask in this order. Never combine two questions in one message. Do not proceed until the current one is answered.
+Ask in this order. Show the example options under each question so the user can pick directly or type their own. Never combine two questions in one message. Do not proceed until the current one is answered.
 
 ### Level 1: Prompt-Driven
 1. **Topic**: "What is the topic of the video, in one sentence?"
-2. **On-screen text**: "What are the 3 to 5 short sentences to show on screen? (Or should I draft them for you?)"
-3. **Style**: "Default style is calm and confident, dark background, two colors plus a highlight color for a single word, large clear font suited to the video language. Keep it or change it?"
-4. **Motion**: "Default motion is smooth sentence entrances, a transition every 2 to 3 seconds, and code-generated sound effects on transitions. Keep it or change it?"
-5. **Ending**: "What name should appear at the end, with 'Follow me' (or 'تابعني')?"
+   - Examples: "Why discipline beats motivation" / "5 habits of productive developers" / "Launching my new app" / "A short story about patience"
+2. **On-screen text**: "What are the 3 to 5 short sentences to show on screen?"
+   - Options: "I'll write them myself" / "Draft them for me from the topic" / "Draft them, then I'll edit" / "Use a quote or saying (I'll paste it)"
+3. **Style**: "Which visual style do you want?"
+   - Options: "Default: calm and confident, dark background, two colors + one highlight word" / "Bold and energetic: high contrast, neon accent" / "Clean and light: white background, soft pastel accent" / "Luxury: black and gold, elegant serif"
+4. **Motion**: "Which motion feel do you want?"
+   - Options: "Default: smooth spring entrances, a cut every 2 to 3s, code-made SFX" / "Fast and punchy: quick cuts, kinetic text, impact SFX" / "Slow and cinematic: long fades, soft camera drift, ambient SFX" / "Minimal: simple fades, no SFX"
+5. **Ending**: "What should the ending say?"
+   - Options: "My name + 'Follow me' (or 'تابعني')" / "My name + a call to action (e.g. 'Link in bio')" / "My name + handle (e.g. @username)" / "No ending card"
 
 Safe zone is fixed (180 top, 320 bottom, 90 sides). Do not ask about it.
 
 ### Level 2: Asset-Driven
 Each is optional. The user may answer "none" or "skip".
-6. **Font**: "Do you have a font file? Give the path, or skip."
-7. **Colors**: "Do you have 5 brand color codes? Give them, or skip."
-8. **Music**: "Do you have a music file? If yes, give the path and I will cut scenes to its beat."
-9. **Your photo**: "Do you have a photo of yourself without a background, for the ending? Give the path, or skip."
-10. **Photos or clips**: "Any photos or video clips to include? Give the paths, or skip."
-11. **Reference video**: "Is there a video whose rhythm and style you like? Give the path and I will take its feel without copying it."
+6. **Font**: "Do you have a font file?"
+   - Options: "Skip (use default: Cairo for Arabic, Plus Jakarta Sans for Latin)" / "Yes, here is the path" / "Suggest a font for my style"
+7. **Colors**: "Do you have brand color codes?"
+   - Options: "Skip (use style defaults)" / "Yes, I'll give 5 hex codes (background, surface, text, muted text, accent)" / "Pick a palette for me" (e.g. obsidian + cyan, navy + amber, charcoal + coral)
+8. **Music**: "Do you have a music file?"
+   - Options: "Skip (code-made SFX only)" / "Yes, here is the path (cut scenes to its beat)" / "Suggest a music mood (calm, epic, upbeat)"
+9. **Your photo**: "Do you have a photo of yourself without a background, for the ending?"
+   - Options: "Skip (name badge only)" / "Yes, here is the path"
+10. **Photos or clips**: "Any photos or video clips to include?"
+   - Options: "Skip (pure motion graphics)" / "Yes, here are the paths (use as b-roll/backgrounds)" / "Yes, a logo only (path)"
+11. **Reference video**: "Is there a video whose rhythm and style you like?"
+   - Options: "Skip" / "Yes, here is the path (take the feel without copying)"
 
 ### Pre-Flight Check (Mandatory)
 After the last question and before Step 1 (Script), summarize the collected requirements briefly, then ask:
