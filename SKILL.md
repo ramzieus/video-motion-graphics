@@ -3,7 +3,7 @@ name: video-motion-graphics
 description: >-
   Creates code-driven 1080x1920 vertical motion graphic videos using Remotion.
   Upon activation, immediately asks the user for the video and communication languages,
-  guides them through Level 1 (prompt-driven) or Level 2 (asset-driven) intake, enforces
+  guides them through combined Level 1 (prompt-driven) and Level 2 (asset-driven) intake, enforces
   strict safe zones (180 top, 320 bottom, 90 sides), and halts for user approval after
   each phase: Script -> Storyboard -> Draft -> Final.
 ---
@@ -33,15 +33,17 @@ Immediately start by asking the user the following two questions:
 
 Once the user replies, conduct all subsequent questions, explanations, and approvals in their chosen **Communication Language**.
 
-Next, ask the user which workflow level they want to use:
-- **Level 1**: Prompt-Driven (No external files needed)
-- **Level 2**: Asset-Driven (User provides local files, fonts, audio, and clips)
+Do NOT ask the user to choose a workflow level. Always use **both** levels together:
+- **Level 1**: Prompt-Driven (topic, text, style, motion, ending)
+- **Level 2**: Asset-Driven (local files: fonts, colors, audio, clips, photo). Every Level 2 field is optional; any field the user leaves blank falls back to the Level 1 defaults.
+
+Present the Level 1 template and the Level 2 template together in a single message.
 
 ---
 
 ## Level 1: Prompt-Driven Workflow
 
-If the user chooses Level 1, prompt them with the following template and ask them to fill in the bracketed fields `[...]`:
+Prompt the user with the following template and ask them to fill in the bracketed fields `[...]`:
 
 ```text
 Topic: [your topic in one sentence]
@@ -71,7 +73,7 @@ Before starting Step 1 (Script), ask the user:
 
 ## Level 2: Asset-Driven Workflow
 
-If the user chooses Level 2, prompt them to provide paths to their local files using the following template:
+In the same message, also prompt the user to provide paths to any local files using the following template (skip any they don't have):
 
 ```text
 And I have files, use them:

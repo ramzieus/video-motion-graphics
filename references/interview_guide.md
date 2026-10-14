@@ -4,7 +4,7 @@ This guide gives the AI agent the exact word-for-word prompts to present to any 
 
 ---
 
-## 1. Initial Prompt (Step 0: Languages & Workflow Level)
+## 1. Initial Prompt (Step 0: Languages)
 
 When the user asks to create a video motion graphic, the agent must output:
 
@@ -13,17 +13,15 @@ Welcome! Before we start designing your motion graphic, please answer two quick 
 
 1. What language will the video content and on-screen text be in? (e.g., Arabic, English, etc.)
 2. What language would you prefer we communicate in during this process?
-
-Also, please let me know which workflow level you'd like to use:
-- Level 1: Prompt-Driven (I provide the ideas and text; no external design files needed)
-- Level 2: Asset-Driven (I have custom files: font, color codes, audio, photo cutout, or video clips)
 ```
+
+After the languages are answered, always present BOTH intake templates (sections 2 and 3) together. Do not ask the user to pick a level.
 
 ---
 
 ## 2. Level 1 Prompt to the User
 
-If the user selects **Level 1**, present them with this intake template:
+Always present this intake template:
 
 ```text
 Please fill in the information in brackets [ ]:
@@ -53,7 +51,7 @@ Before I start: Is there anything missing or any extra detail you'd like to add?
 
 ## 3. Level 2 Prompt to the User
 
-If the user selects **Level 2**, present them with this file intake template:
+Always present this file intake template together with Level 1. All fields are optional; blank fields fall back to Level 1 defaults:
 
 ```text
 Please provide the paths to your local files below:

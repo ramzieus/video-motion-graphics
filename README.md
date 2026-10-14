@@ -62,7 +62,9 @@ All subsequent discovery questions, scripts, and reviews take place in your pref
 
 ---
 
-## ⚡ The Two Interaction Levels
+## ⚡ The Two Interaction Levels (Used Together)
+
+Both levels are always used together: you give the prompt details (Level 1) and any local assets you have (Level 2). Blank asset fields fall back to Level 1 defaults.
 
 ### Level 1: Prompt-Driven (Zero Files Needed)
 You provide ideas through text prompts; the agent fills the gaps:
