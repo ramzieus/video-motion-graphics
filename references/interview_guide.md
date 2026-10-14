@@ -15,58 +15,34 @@ Welcome! Before we start designing your motion graphic, please answer two quick 
 2. What language would you prefer we communicate in during this process?
 ```
 
-After the languages are answered, always present BOTH intake templates (sections 2 and 3) together. Do not ask the user to pick a level.
+After the languages are answered, run the intake **one question at a time** (sections 2 and 3). Never show the whole questionnaire at once. Do not ask the user to pick a level; both are always used.
 
 ---
 
-## 2. Level 1 Prompt to the User
+## 2. Level 1 Questions (ask one by one, wait for each answer)
 
-Always present this intake template:
+1. Topic: "What is the topic of the video, in one sentence?"
+2. On-screen text: "What are the 3 to 5 short sentences to show on screen? (Or should I draft them for you?)"
+3. Style: "Default: calm and confident, dark background, two colors plus a highlight color for a single word, large clear font. Keep or change?"
+4. Motion: "Default: smooth sentence entrances, transition every 2 to 3 seconds, code-generated sound effects. Keep or change?"
+5. Ending: "What name should appear at the end, with 'Follow me' (or 'تابعني')?"
 
-```text
-Please fill in the information in brackets [ ]:
-
-Topic: [your topic in one sentence]
-On-screen text: [3 to 5 short sentences]
-
-Style: Calm and confident,
-dark background, only two colors,
-and a highlight color for a single word.
-Large and clear Arabic font (or font suited to your video language).
-
-Motion: Each sentence enters smoothly,
-and the screen transitions every 2 to 3 seconds.
-Include sound effects using code for scene transitions and animations.
-Keep the text inside the safe zone:
-180 from the top, 320 from the bottom, 90 from the sides.
-
-Ending: My name is [your name] + "Follow me" (or in Arabic: "تابعني").
-
-(Note: The style, motion, and ending above are customizable defaults. Feel free to provide different details).
-
-Before I start: Is there anything missing or any extra detail you'd like to add?
-```
+Safe zone (180 top, 320 bottom, 90 sides) is fixed; do not ask.
 
 ---
 
-## 3. Level 2 Prompt to the User
+## 3. Level 2 Questions (ask one by one; each is optional, skipped = Level 1 default)
 
-Always present this file intake template together with Level 1. All fields are optional; blank fields fall back to Level 1 defaults:
+6. Font: "Do you have a font file? Give the path, or skip."
+7. Colors: "Do you have 5 brand color codes? Give them, or skip."
+8. Music: "Do you have a music file? If yes, give the path and I will cut scenes to its beat."
+9. Photo: "Do you have a photo of yourself without a background, for the ending? Give the path, or skip."
+10. Photos or clips: "Any photos or video clips to include? Give the paths, or skip."
+11. Reference video: "Is there a video whose rhythm and style you like? Give the path and I will take its feel without copying."
 
-```text
-Please provide the paths to your local files below:
+Then summarize the requirements and ask: "Before I start, is there anything missing or any additional detail you would like to include?"
 
-Font: [font file path]
-Colors: [5 color codes]
-Music: [audio file path], and make the scene transitions to its beat
-My photo without a background: [path], for the ending
-Photos or clips: [paths]
-A video I like: [path], take the rhythm and style from it without copying
-
-Our workflow will proceed step by step:
-Script -> Storyboard -> Draft -> Final
-I will stop after each step until you review and approve.
-```
+Workflow reminder to the user: Script -> Storyboard -> Draft -> Final. I will stop after each step until you review and approve.
 
 ---
 

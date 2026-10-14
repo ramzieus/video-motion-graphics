@@ -35,56 +35,37 @@ Once the user replies, conduct all subsequent questions, explanations, and appro
 
 Do NOT ask the user to choose a workflow level. Always use **both** levels together:
 - **Level 1**: Prompt-Driven (topic, text, style, motion, ending)
-- **Level 2**: Asset-Driven (local files: fonts, colors, audio, clips, photo). Every Level 2 field is optional; any field the user leaves blank falls back to the Level 1 defaults.
+- **Level 2**: Asset-Driven (local files: fonts, colors, audio, clips, photo). Every Level 2 field is optional; if the user skips one, fall back to the Level 1 default.
 
-Present the Level 1 template and the Level 2 template together in a single message.
+**NEVER dump the templates or a full questionnaire on the user.** Collect requirements interactively, **one question at a time**: ask a single question, wait for the answer, then ask the next. Use `AskUserQuestion` when available (offer the defaults as options plus "Other"); otherwise ask in plain text. Ask all questions in the **Communication Language**.
 
 ---
 
-## Level 1: Prompt-Driven Workflow
+## Intake Questions (One by One)
 
-Prompt the user with the following template and ask them to fill in the bracketed fields `[...]`:
+Ask in this order. Never combine two questions in one message. Do not proceed until the current one is answered.
 
-```text
-Topic: [your topic in one sentence]
-On-screen text: [3 to 5 short sentences]
+### Level 1: Prompt-Driven
+1. **Topic**: "What is the topic of the video, in one sentence?"
+2. **On-screen text**: "What are the 3 to 5 short sentences to show on screen? (Or should I draft them for you?)"
+3. **Style**: "Default style is calm and confident, dark background, two colors plus a highlight color for a single word, large clear font suited to the video language. Keep it or change it?"
+4. **Motion**: "Default motion is smooth sentence entrances, a transition every 2 to 3 seconds, and code-generated sound effects on transitions. Keep it or change it?"
+5. **Ending**: "What name should appear at the end, with 'Follow me' (or 'تابعني')?"
 
-Style: Calm and confident,
-dark background, only two colors,
-and a highlight color for a single word.
-Large and clear Arabic font (or font suited to the chosen video language).
+Safe zone is fixed (180 top, 320 bottom, 90 sides). Do not ask about it.
 
-Motion: Each sentence enters smoothly,
-and the screen transitions every 2 to 3 seconds.
-Include sound effects using code for scene transitions and animations.
-Keep the text inside the safe zone:
-180 from the top, 320 from the bottom, 90 from the sides.
-
-Ending: My name is [your name] + "Follow me" (or in Arabic: "تابعني").
-
-(The style, motion, and ending above are customizable defaults. You can prompt different details if desired).
-```
+### Level 2: Asset-Driven
+Each is optional. The user may answer "none" or "skip".
+6. **Font**: "Do you have a font file? Give the path, or skip."
+7. **Colors**: "Do you have 5 brand color codes? Give them, or skip."
+8. **Music**: "Do you have a music file? If yes, give the path and I will cut scenes to its beat."
+9. **Your photo**: "Do you have a photo of yourself without a background, for the ending? Give the path, or skip."
+10. **Photos or clips**: "Any photos or video clips to include? Give the paths, or skip."
+11. **Reference video**: "Is there a video whose rhythm and style you like? Give the path and I will take its feel without copying it."
 
 ### Pre-Flight Check (Mandatory)
-Before starting Step 1 (Script), ask the user:
+After the last question and before Step 1 (Script), summarize the collected requirements briefly, then ask:
 > *"Before I start, is there anything missing or any additional detail you would like to include?"*
-
----
-
-## Level 2: Asset-Driven Workflow
-
-In the same message, also prompt the user to provide paths to any local files using the following template (skip any they don't have):
-
-```text
-And I have files, use them:
-
-Font: [font file path]
-Colors: [5 color codes]
-Music: [audio file path], and make the scene transitions to its beat
-My photo without a background: [path], for the ending
-Photos or clips: [paths]
-A video I like: [path], take the rhythm and style from it without copying
-```
 
 ---
 
