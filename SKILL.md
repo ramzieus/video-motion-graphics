@@ -121,10 +121,13 @@ Once the storyboard is approved, generate the Remotion composition code:
 2. Apply physics-based springs (`damping: 12, mass: 0.5, stiffness: 120`).
 3. If Arabic is selected: Set `dir="rtl"` and configure an Arabic font (e.g. *Cairo* or user's font file).
 4. Integrate sound effects using Remotion audio components at scene boundaries.
-5. Provide draft code or start the Remotion preview:
+5. **Live preview after every edit (Mandatory)**: After each edit to the composition (including the last one), start (or reuse) the Remotion preview and open it directly in the user's browser. Never just hand over code, and never wait to be asked:
    ```bash
-   npx remotion preview
+   npx remotion preview --port 3000   # opens the browser automatically
+   # if the browser did not open:
+   xdg-open http://localhost:3000 || open http://localhost:3000
    ```
+   Run the server in the background so the session stays usable; hot reload shows later edits, but re-open/confirm the browser tab after each last edit.
 6. **STOP: Ask the user to review the draft and wait for their feedback or approval.**
 
 ---
@@ -141,7 +144,10 @@ The agent must review the composition layout and verify:
 - [ ] **Pacing**: Scene transitions occur smoothly every 2 to 3 seconds.
 - [ ] **Any issue found must be fixed automatically before exporting.**
 
-#### 2. Export & Deliver
+#### 2. Preview Gate (Mandatory, before any render)
+Any time the composition was edited (including fixes from the self-review above), open the preview in the user's browser first (`npx remotion preview`, plus `xdg-open`/`open` of the URL) and show it. **Do not run `render_video.sh` or `npx remotion render` until the user has seen the latest edit in the browser and approved.** Every new edit re-triggers this gate.
+
+#### 3. Export & Deliver
 Check whether FFmpeg is available on the user's system:
 - **If FFmpeg is available**:
   Export as an MP4 at `1080x1920` resolution using:
